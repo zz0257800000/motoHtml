@@ -1,0 +1,254 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  margin: 0;
+  background-color: grey;
+  position: relative;
+}
+
+p {
+  font-size: 15pt;
+}
+
+a {
+  font-size: 20pt;
+  text-decoration: none;
+}
+
+.page {
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-bottom: 50px;
+  border: 0px solid black;
+}
+
+.x {
+  height: 30px;
+  width: 30px;
+}
+
+.left {
+  margin-top: 80px;
+  position: fixed;
+  left: 10px;
+  height: 7vh;
+  border: 0px solid black;
+  width: 4vw;
+}
+.left .sidebar {
+  display: none;
+}
+.left:hover {
+  /* 鼠标按下时的滑轨 */
+}
+.left:hover .sidebar {
+  display: block;
+  width: 150px;
+  /* 收起时的宽度 */
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* 隐藏在左侧 */
+  background-color: #333;
+  color: #fff;
+  transition: left 0.3s ease;
+  /* 添加过渡效果 */
+}
+.left:hover .sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.left:hover .sidebar a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+}
+.left:hover .slider-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* 半透明背景 */
+  z-index: -1;
+  /* 放置在导航菜单后面 */
+  transition: width 0.3s ease;
+}
+
+.header1 {
+  height: 1vh;
+  width: 100vw;
+  background-color: rgb(255, 27, 27);
+  margin-bottom: 0px;
+}
+
+.header {
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  position: fixed;
+  justify-self: center;
+  align-items: center;
+  height: 10vh;
+  background-color: rgba(245, 245, 245, 0.5);
+  margin-bottom: 1px;
+  box-shadow: 0 10px 6px -6px;
+  color: aqua;
+  transition: 0.5ms;
+}
+.header p {
+  color: black;
+  margin-top: 15px;
+}
+.header .navbar {
+  width: 70%;
+  margin-left: 10vw;
+  display: flex;
+  justify-content: space-between;
+}
+.header .navbar .a {
+  text-decoration: none;
+}
+
+.pageName {
+  justify-content: space-between;
+  margin-top: 50px;
+  width: 80%;
+  margin-left: 110px;
+  display: flex;
+  box-shadow: 0 10px 6px -6px;
+  color: rgb(227, 255, 150);
+}
+.pageName h2 {
+  color: rgb(234, 255, 113);
+  font-size: 50pt;
+}
+.pageName img {
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 50px;
+  width: 20%;
+}
+
+.carousel {
+  z-index: -5;
+  margin-top: 40px;
+  width: 65%;
+  margin-bottom: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60px;
+  bottom: 2px;
+}
+
+.second {
+  height: 200vh;
+  width: 80%;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-left: 110px;
+}
+.second .rightNineAreas {
+  height: 100%;
+  width: 100%;
+  margin-left: 33px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: center;
+  margin-left: 80px;
+}
+.second .rightNineAreas .nums {
+  height: 20%;
+  width: 50%;
+}
+.second .rightNineAreas .nums .numsColor {
+  height: 80%;
+  width: 80%;
+  background-color: aqua;
+}
+
+.third {
+  height: 80vh;
+  width: 100vw;
+  margin: 0;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: black;
+  margin-bottom: 0;
+  margin-top: 5%;
+  display: flex;
+}
+.third a:hover {
+  color: white;
+}
+
+.footer {
+  height: 10vh;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  background-color: rgb(60, 60, 60);
+  font-size: 20pt;
+}
+
+.footer1 {
+  height: 5vh;
+  background-color: rgb(0, 0, 0);
+}
+
+.image-container {
+  position: fixed;
+  bottom: 40px;
+  /* 距离底部的距离 */
+  right: 20px;
+  /* 距离右侧的距离 */
+  width: 80px;
+  /* 图片容器的宽度 */
+  height: auto;
+  overflow: hidden;
+  transition: transform 3ms ease;
+  font-size: 4pt;
+  margin-bottom: 50px;
+  /* 添加过渡效果 */
+}
+
+/* 图片的初始样式 */
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* 鼠标悬停时放大图片 */
+.image-container:hover {
+  width: 300px;
+  /* 鼠标悬停时的宽度 */
+  height: auto;
+}
+
+.top {
+  position: fixed;
+  height: 70px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(245, 245, 245, 0.5);
+  right: 0;
+  font-size: 20pt;
+  bottom: 15px;
+  margin-right: 20px;
+}/*# sourceMappingURL=style.css.map */
